@@ -1,6 +1,3 @@
-const CustomError = require("../extensions/custom-error");
+module.exports = countCats = matrix => matrix.flatMap(_ => _).filter(isCatItem).length
 
-module.exports = function countCats(/* matrix */) {
-  throw new CustomError('Not implemented');
-  // remove line with error and write your code here
-};
+const isCatItem = item => /^[\^]{2}$/.test(item);
